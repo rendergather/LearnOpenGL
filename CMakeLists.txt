@@ -1,8 +1,8 @@
 cmake_minimum_required (VERSION 2.8)
 cmake_policy(VERSION 2.8)
 
-#set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS TRUE)
-#set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS TRUE)
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 project (LearnOpenGL)
 
@@ -193,7 +193,7 @@ foreach(CHAPTER ${CHAPTERS})
             "src/${CHAPTER}/${DEMO}/*.fs"
             "src/${CHAPTER}/${DEMO}/*.gs"
         )	
-        set(NAME "${CHAPTER}__${DEMO}")
+        set(NAME "${DEMO}")
         add_executable(${NAME} ${SOURCE})
         target_link_libraries(${NAME} ${LIBS})
 		SET_TARGET_PROPERTIES(${NAME} PROPERTIES FOLDER ${CHAPTER})
